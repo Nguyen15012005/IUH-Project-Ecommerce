@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author TrungNguyen
@@ -43,7 +42,7 @@ public class Seller {
     private BankDetails bankDetails = new BankDetails();
 
     @OneToOne(cascade = CascadeType.ALL) //một seller có một địa chỉ, khi xóa seller thì xóa luôn địa chỉ
-    private Address address;
+    private Address pickupAddress;
 
     private String GSTIN;
 

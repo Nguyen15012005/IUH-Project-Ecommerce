@@ -1,5 +1,5 @@
-Client → Controller → Service → Repository → Database
+Luồng FE -> BE :Client → Controller → Service → Repository → Database
                                    ↑
                               Entity
 
-Database → Repository → Service → Controller → Client
+Luồng BE -> FE :Database → Repository → Service → Controller → Client
