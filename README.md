@@ -1,4 +1,4 @@
-# 🛒 Fullstack E-Commerce Website (Multi-Vendor)
+# 🛒 Fullstack E-Commerce Website DailyZone Store (Multi-Vendor)
 
 ## 📚 Thông tin môn học
 - **Môn:** Phát triển giao diện ứng dụng ReactJS  
