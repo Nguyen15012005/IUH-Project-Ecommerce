@@ -5,10 +5,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#fea928",
-        secondary: "#ed8900",
-        bg_login: "#FFCCCC",
+        primary: "#111111", // đen
+        secondary: "#C9A96E", // gold
+        accent: "#E5D3B3", // beige
+
+        bg: "#FAFAFA",
+        card: "#FFFFFF",
+        border: "#EAEAEA",
+
+        text: "#1A1A1A",
+        "text-light": "#666",
       },
+
       container: {
         center: true,
         padding: {
@@ -16,21 +24,20 @@ export default {
           sm: "3rem",
         },
       },
+
       fontFamily: {
-        comic: ['"Comic Sans MS"', "cursive", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+        luxury: ['"Playfair Display"', "serif"],
       },
 
       animation: {
-        slideInLeft: "slideInLeft 0.3s ease",
-        fadeOut: "fadeOut 1s ease forwards",
+        fadeIn: "fadeIn 0.4s ease",
       },
+
       keyframes: {
-        slideInLeft: {
-          "0%": { opacity: "0", transform: "translateX(calc(100% + 32px))" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
-        fadeOut: {
-          "100%": { opacity: "0" },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
       },
     },

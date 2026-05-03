@@ -1,10 +1,9 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import MenuIcon from "@mui/icons-material/Menu";
-import { IconButton, ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import Navbar from "./customer/components/navbar/Navbar";
 import CustomeTheme from "./theme/CustomeThem";
 import Home from "./customer/pages/home/Home";
+import Footer from "./customer/components/footer/Footer";
 
 const App = () => {
   return (
@@ -13,6 +12,7 @@ const App = () => {
         <div className="">
           <Navbar />
           <Home />
+          <Footer/>
         </div>
       </ThemeProvider>
     </div>
