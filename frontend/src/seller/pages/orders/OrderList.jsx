@@ -41,7 +41,10 @@ const stats = [
   { label: 'ĐÃ XỬ LÝ', value: '1,154', change: '+8.4%', isPositive: true },
   { label: 'ĐANG CHỜ XỬ LÝ', value: '42', warning: 'Cần xử lý gấp', isWarning: true },
   { label: 'ĐÃ HỦY', value: '10', change: '-2.5%', isPositive: false },
-  { label: 'TỶ LỆ HỦY ĐƠN', value: '0.8%', change: '+0.2%', isPositive: false },
+  {
+    label: 'TỶ LỆ HỦY ĐƠN', value: '0.8%', change: '+0.2%', isPositive: true
+
+  },
 ];
 
 const orders = [
