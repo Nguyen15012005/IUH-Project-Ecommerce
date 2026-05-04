@@ -21,7 +21,7 @@ const CategoryChart = () => {
   return (
     <Box sx={{ p: 3, bgcolor: '#fff', borderRadius: '24px', border: '1px solid #F0F0F0', height: '100%' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4 }}>
-        <Typography variant="h6" sx={{ fontWeight: 800 }}>Top danh mục</Typography>
+        <Typography variant="h6" sx={{ fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Top danh mục</Typography>
         <Typography variant="caption" sx={{ color: '#C9A96E', fontWeight: 700, cursor: 'pointer' }}>Xem tất cả</Typography>
       </Box>
 

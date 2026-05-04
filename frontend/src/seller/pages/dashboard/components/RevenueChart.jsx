@@ -27,7 +27,7 @@ const RevenueChart = () => {
   return (
     <Box sx={{ p: 3, bgcolor: '#fff', borderRadius: '24px', border: '1px solid #F0F0F0', height: '100%' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4, alignItems: 'center' }}>
-        <Typography variant="h6" sx={{ fontWeight: 800 }}>Phân tích doanh thu</Typography>
+        <Typography variant="h6" sx={{ fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Phân tích doanh thu</Typography>
         <Select size="small" defaultValue={8} sx={{ borderRadius: '10px', bgcolor: '#C9A96E', color: '#fff', '& .MuiSelect-icon': { color: '#fff' } }}>
           <MenuItem value={8}>8 ngày gần nhất</MenuItem>
           <MenuItem value={30}>30 ngày gần nhất</MenuItem>

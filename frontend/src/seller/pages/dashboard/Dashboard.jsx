@@ -71,7 +71,7 @@ const Dashboard = () => {
       <TopBar />
       
       <Box sx={{ px: 4 }}>
-        <Typography variant="h4" sx={{ fontWeight: 800, mb: 3, fontFamily: 'serif' }}>
+        <Typography variant="h4" sx={{ fontWeight: 800, mb: 3 }}>
           Dashboard
         </Typography>
 
@@ -96,7 +96,7 @@ const Dashboard = () => {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Card sx={{ borderRadius: '24px', p: 3, height: '100%', border: '1px solid #F0F0F0', boxShadow: 'none' }}>
-                  <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 3 }}>Mục tiêu tháng</Typography>
+                  <Typography variant="subtitle1" sx={{ fontWeight: 800, mb: 3, textTransform: 'uppercase', letterSpacing: '1px' }}>Mục tiêu tháng</Typography>
                   <Box sx={{ textAlign: 'center', py: 4 }}>
                     <Typography variant="h3" sx={{ fontWeight: 800, color: '#C9A96E' }}>85%</Typography>
                     <Typography variant="body2" color="textSecondary">Tiến độ rất tốt! 🎉</Typography>
@@ -124,7 +124,7 @@ const Dashboard = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                  <Card sx={{ borderRadius: '24px', p: 3, border: '1px solid #F0F0F0', boxShadow: 'none', height: 400, display: 'flex', flexDirection: 'column' }}>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>Người dùng tích cực</Typography>
+                    <Typography variant="subtitle1" sx={{ fontWeight: 800, mb: 2, textTransform: 'uppercase', letterSpacing: '1px' }}>Người dùng tích cực</Typography>
                     <Box sx={{ mt: 1.5 }}>
                        {[
                          { country: 'Việt Nam', value: 36, color: '#C9A96E' },
@@ -165,7 +165,7 @@ const Dashboard = () => {
               </Grid>
               <Grid item xs={12}>
                 <Card sx={{ borderRadius: '24px', p: 3, border: '1px solid #F0F0F0', boxShadow: 'none', height: 400, display: 'flex', flexDirection: 'column' }}>
-                  <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>Nguồn truy cập</Typography>
+                  <Typography variant="subtitle1" sx={{ fontWeight: 800, mb: 2, textTransform: 'uppercase', letterSpacing: '1px' }}>Nguồn truy cập</Typography>
                   <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mt: 1 }}>
                     {[
                       { name: 'Trực tiếp', value: 40 },
