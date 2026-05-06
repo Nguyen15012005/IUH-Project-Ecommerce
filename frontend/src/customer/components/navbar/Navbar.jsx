@@ -1,7 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import Box from "@mui/material/Box";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Button, IconButton, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Button,
+  IconButton,
+  useMediaQuery,
+  useTheme,
+  Drawer, // ✅ thêm
+} from "@mui/material";
 import {
   AddShoppingCart,
   FavoriteBorder,
@@ -21,14 +27,14 @@ const Navbar = () => {
   const [showSheet, setShowSheet] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("men");
 
-  const searchRef = useRef(null);
+  // ✅ NEW STATE (mobile menu)
+  const [openMenu, setOpenMenu] = useState(false);
 
-  // ✅ THÊM delay hover
+  const searchRef = useRef(null);
   const timeoutRef = useRef(null);
 
   const navigate = useNavigate();
 
-  // click outside search
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -48,7 +54,7 @@ const Navbar = () => {
   return (
     <div className="navbar sticky top-0 z-50 bg-white shadow-sm text-gray-700">
       <Box sx={{ zIndex: 2 }} className="sticky top-0 left-0 right-0 bg-white">
-        <div className="">
+        <div>
           {/* Announcement */}
           <div className="bg-gradient-to-r from-[#100d0d] to-[#1a1614] h-8 flex items-center justify-center">
             <span className="text-[11px] tracking-[2px] uppercase text-white">
@@ -60,34 +66,40 @@ const Navbar = () => {
           <div className="flex items-center justify-between px-4 md:px-6 lg:px-20 h-[70px] border-b border-gray-200">
             {/* LEFT */}
             <div className="flex items-center gap-3">
+              {/* ✅ FIX: thêm action */}
               {!isLarge && (
-                <IconButton className="hover:bg-gray-100">
+                <IconButton
+                  onClick={() => setOpenMenu(true)}
+                  className="hover:bg-gray-100"
+                >
                   <MenuIcon />
                 </IconButton>
               )}
 
               {/* LOGO */}
-              <div className="flex items-center gap-3 cursor-pointer">
+              <div className="flex items-center gap-2 lg:gap-3 cursor-pointer">
                 <div className="flex flex-col leading-none">
-                  <span className="text-[40px] font-serif text-[#C9A96E]">
+                  <span className="text-[26px] lg:text-[40px] font-serif text-[#C9A96E]">
                     D
                   </span>
-                  <span className="text-[40px] font-serif text-[#C9A96E] -mt-6 ml-3">
+                  <span className="text-[26px] lg:text-[40px] font-serif text-[#C9A96E] -mt-4 lg:-mt-6 ml-2 lg:ml-3">
                     Z
                   </span>
                 </div>
 
                 <div className="flex flex-col">
-                  <h1 className="text-[18px] md:text-[20px] font-serif tracking-[3px] text-[#111] mb-2">
+                  <h1 className="text-[14px] sm:text-[16px] lg:text-[20px] font-serif tracking-[2px] lg:tracking-[3px] text-[#111] mb-1 lg:mb-2">
                     DAILY ZONE
                   </h1>
-                  <span className="text-[9px] tracking-[5px] text-gray-400 uppercase">
+
+                  {/* ✅ ẨN TRÊN MOBILE */}
+                  <span className="hidden sm:block text-[8px] lg:text-[9px] tracking-[5px] text-gray-400 uppercase">
                     Style your life
                   </span>
                 </div>
               </div>
 
-              {/* MENU */}
+              {/* MENU DESKTOP */}
               {isLarge && (
                 <ul className="flex items-center ml-6 text-gray-700">
                   {[
@@ -99,7 +111,7 @@ const Navbar = () => {
                     <li
                       key={item.key}
                       onMouseEnter={() => {
-                        clearTimeout(timeoutRef.current); // ✅ fix mất hover
+                        clearTimeout(timeoutRef.current);
                         setSelectedCategory(item.key);
                         setShowSheet(true);
                       }}
@@ -140,7 +152,13 @@ const Navbar = () => {
               <Button
                 onClick={() => navigate("/login")}
                 variant="contained"
-                className="normal-case px-6 py-2 bg-black text-white border border-black rounded-md"
+                className="
+                normal-case 
+                px-3 lg:px-6 
+                py-1.5 lg:py-2 
+                text-xs lg:text-sm 
+                bg-black text-white border border-black rounded-md
+              "
               >
                 Đăng nhập
               </Button>
@@ -169,17 +187,17 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* ✅ CATEGORY SHEET */}
-        {showSheet && (
+        {/* CATEGORY SHEET (ẩn mobile) */}
+        {isLarge && showSheet && (
           <div
             onMouseEnter={() => {
-              clearTimeout(timeoutRef.current); // ✅ giữ hover
+              clearTimeout(timeoutRef.current);
               setShowSheet(true);
             }}
             onMouseLeave={() => {
               timeoutRef.current = setTimeout(() => {
                 setShowSheet(false);
-              }, 200); // ✅ delay tránh mất hover
+              }, 200);
             }}
             className="categorySheet absolute top-[5.5rem] left-20 right-20 z-40"
           >
@@ -190,6 +208,32 @@ const Navbar = () => {
           </div>
         )}
       </Box>
+
+      {/* ✅ MOBILE DRAWER MENU */}
+      <Drawer anchor="left" open={openMenu} onClose={() => setOpenMenu(false)}>
+        <div className="w-[260px] p-4 space-y-3">
+          <h2 className="text-lg font-semibold mb-2">Danh mục</h2>
+
+          {[
+            { name: "Men", key: "men" },
+            { name: "Women", key: "women" },
+            { name: "Electric", key: "electronics" },
+            { name: "Home & Furniture", key: "home_furnitures" },
+          ].map((item) => (
+            <div
+              key={item.key}
+              onClick={() => {
+                setSelectedCategory(item.key);
+                setShowSheet(true);
+                setOpenMenu(false);
+              }}
+              className="py-3 px-3 rounded-lg cursor-pointer hover:bg-gray-100"
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
+      </Drawer>
     </div>
   );
 };

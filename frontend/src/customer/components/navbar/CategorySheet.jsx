@@ -1,14 +1,14 @@
 import React from "react";
 
 import { Box } from "@mui/material";
-import { womenLevelTwo } from "./../../../data/category/level two/womenLevelTwo";
-import { menLevelTwo } from "./../../../data/category/level two/menLevelTwo";
-import { electronicsLevelTwo } from "./../../../data/category/level two/electronicsLevelTwo";
-import { furnitureLevelTwo } from "./../../../data/category/level two/furnitureLevelTwo";
-import { menLevelThree } from "./../../../data/category/level three/menLevelThree";
-import { womenLevelThree } from "./../../../data/category/level three/womenLevelThree";
-import { electronicsLevelThree } from "./../../../data/category/level three/electronicsLevelThree";
-import { furnitureLevelThree } from "./../../../data/category/level three/furnitureLevelThree";
+import { womenLevelTwo } from "./../../../data/category/level_two/womenLevelTwo";
+import { menLevelTwo } from "./../../../data/category/level_two/menLevelTwo";
+import { electronicsLevelTwo } from "./../../../data/category/level_two/electronicsLevelTwo";
+import { furnitureLevelTwo } from "./../../../data/category/level_two/furnitureLevelTwo";
+import { menLevelThree } from "./../../../data/category/level_three/menLevelThree";
+import { womenLevelThree } from "./../../../data/category/level_three/womenLevelThree";
+import { electronicsLevelThree } from "./../../../data/category/level_three/electronicsLevelThree";
+import { furnitureLevelThree } from "./../../../data/category/level_three/furnitureLevelThree";
 
 const categoryTwo = {
   men: menLevelTwo,
