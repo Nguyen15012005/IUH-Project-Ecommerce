@@ -20,6 +20,17 @@ const CustomeTheme = createTheme({
     divider: "#EAEAEA",
   },
 
+  typography: {
+    fontFamily: "'Be Vietnam Pro', sans-serif",
+    h1: { fontWeight: 700 },
+    h2: { fontWeight: 700 },
+    h3: { fontWeight: 600 },
+    h4: { fontWeight: 600 },
+    h5: { fontWeight: 600 },
+    h6: { fontWeight: 600 },
+    button: { fontWeight: 600 },
+  },
+
   shape: {
     borderRadius: 8,
   },

@@ -23,7 +23,7 @@ const ConversionChart = () => {
   return (
     <Box sx={{ p: 3, bgcolor: '#fff', borderRadius: '24px', border: '1px solid #F0F0F0', height: 400, display: 'flex', flexDirection: 'column' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4, alignItems: 'center' }}>
-        <Typography variant="h6" sx={{ fontWeight: 800 }}>Tỉ lệ chuyển đổi</Typography>
+        <Typography variant="h6" sx={{ fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Tỉ lệ chuyển đổi</Typography>
         <Select size="small" defaultValue="week" sx={{ borderRadius: '10px' }}>
           <MenuItem value="week">Tuần này</MenuItem>
           <MenuItem value="month">Tháng này</MenuItem>
