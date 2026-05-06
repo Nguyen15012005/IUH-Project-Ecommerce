@@ -11,6 +11,7 @@ import ProductList from "./seller/pages/products/ProductList";
 import OrderList from "./seller/pages/orders/OrderList";
 import CustomerList from "./seller/pages/customers/CustomerList";
 import SellerProfile from "./seller/pages/profile/SellerProfile";
+import Reports from "./seller/pages/reports/Reports";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="orders" element={<OrderList />} />
             <Route path="customers" element={<CustomerList />} />
             <Route path="profile" element={<SellerProfile />} />
+            <Route path="reports" element={<Reports />} />
           </Route>
         </Routes>
       </Router>
