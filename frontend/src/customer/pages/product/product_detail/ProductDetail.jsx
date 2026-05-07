@@ -1,5 +1,4 @@
-import { Box, Button, Divider, Modal } from "@mui/material";
-import { teal } from "@mui/material/colors";
+import { Button, Divider } from "@mui/material";
 import {
   ShieldCheck,
   Star,
@@ -12,6 +11,8 @@ import {
   Heart,
 } from "lucide-react";
 import React, { useState } from "react";
+import SimilarProduct from "../SimilarProduct/SimilarProduct";
+import ReviewCard from "../../review/ReviewCard";
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
@@ -163,7 +164,18 @@ const ProductDetail = () => {
               giao đến tay khách hàng.
             </p>
           </div>
+
+          <div className="mt-7">
+            <ReviewCard />
+          </div>
         </section>
+      </div>
+
+      <div className="mt-20">
+        <h1 className="text-5xl mb-10 font-bold">Sản Phẩm Tương Tự</h1>
+        <div className="pt-5">
+          <SimilarProduct />
+        </div>
       </div>
     </div>
   );

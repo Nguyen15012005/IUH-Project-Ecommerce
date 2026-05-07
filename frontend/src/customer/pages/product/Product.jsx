@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import FilterSection from "./FilterSection";
 import { useTheme } from "@emotion/react";
 import {
   Divider,
@@ -11,6 +10,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import ProductCard from "./product_card/ProductCard";
+import FilterSection from "./filter_product/FilterSection";
 
 const Product = () => {
   const theme = useTheme();

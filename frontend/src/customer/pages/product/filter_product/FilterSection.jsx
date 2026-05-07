@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { colors } from "../../../data/Filter/color";
-import { price } from "../../../data/Filter/price";
-import { discount } from "../../../data/Filter/discount";
+import { colors } from "../../../../data/Filter/color";
+import { price } from "../../../../data/Filter/price";
+import { discount } from "../../../../data/Filter/discount";
 
 const GOLD = "#C6A15B";
 const GOLD_DARK = "#a07830";
