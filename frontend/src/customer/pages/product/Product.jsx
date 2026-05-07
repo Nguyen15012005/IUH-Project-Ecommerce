@@ -16,10 +16,15 @@ const Product = () => {
   const theme = useTheme();
   const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
 
-  const [sort, setSort] = useState("");
+  const [sort, setSort] = useState();
+  const [page, setPage] = useState(1);
 
   const handleSortChange = (event) => {
     setSort(event.target.value);
+  };
+
+  const handlePageChange = (value) => {
+    setPage(value);
   };
 
   return (
@@ -95,7 +100,11 @@ const Product = () => {
           </section>
 
           <div className="flex justify-center mt-10 pt-10">
-            <Pagination count={10} variant="outlined" />
+            <Pagination
+              onChange={(e, value) => handlePageChange(value)}
+              count={10}
+              variant="outlined"
+            />
           </div>
         </div>
       </div>

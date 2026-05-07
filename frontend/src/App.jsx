@@ -12,37 +12,37 @@ import OrderList from "./seller/pages/orders/OrderList";
 import CustomerList from "./seller/pages/customers/CustomerList";
 import SellerProfile from "./seller/pages/profile/SellerProfile";
 import Reports from "./seller/pages/reports/Reports";
+import ProductDetail from "./customer/pages/product/product_detail/ProductDetail";
 
 const App = () => {
   return (
     <ThemeProvider theme={CustomeTheme}>
-      <Router>
-        <Routes>
-          {/* Customer Routes */}
-          <Route
-            path="/"
-            element={
-              <div className="">
-                <Navbar />
-                {/* <Home /> */}
-                <Product />
-                <Footer />
-              </div>
-            }
-          />
+      <Routes>
+        {/* Customer Routes */}
+        <Route
+          path="/"
+          element={
+            <div className="">
+              <Navbar />
+              {/* <Home /> */}
+              {/* <Product /> */}
+              <ProductDetail />
+              <Footer />
+            </div>
+          }
+        />
 
-          {/* Seller Routes */}
-          <Route path="/seller" element={<SellerLayout />}>
-            <Route index element={<Dashboard />} />
-            <Route path="products" element={<ProductList />} />
-            <Route path="add-product" element={<ProductList />} />
-            <Route path="orders" element={<OrderList />} />
-            <Route path="customers" element={<CustomerList />} />
-            <Route path="profile" element={<SellerProfile />} />
-            <Route path="reports" element={<Reports />} />
-          </Route>
-        </Routes>
-      </Router>
+        {/* Seller Routes */}
+        <Route path="/seller" element={<SellerLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="products" element={<ProductList />} />
+          <Route path="add-product" element={<ProductList />} />
+          <Route path="orders" element={<OrderList />} />
+          <Route path="customers" element={<CustomerList />} />
+          <Route path="profile" element={<SellerProfile />} />
+          <Route path="reports" element={<Reports />} />
+        </Route>
+      </Routes>
     </ThemeProvider>
   );
 };
