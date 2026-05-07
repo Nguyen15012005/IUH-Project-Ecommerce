@@ -45,7 +45,7 @@ const ReviewCard = () => {
               {[1, 2, 3, 4, 5].map((image) => (
                 <img
                   key={image}
-                  className="w-24 h-24 object-cover flex-shrink-0 rounded-md"
+                  className="w-24 h-24 object-cover flex-shrink-0 rounded-md cursor-pointer hover:scale-105 transition duration-300 "
                   src="https://wwd.com/wp-content/uploads/2025/02/etro-fw25-rtw-r-gg-0001.jpg?crop=0px%2C36px%2C1365px%2C1821px&resize=555%2C740"
                   alt=""
                 />

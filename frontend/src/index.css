@@ -91,7 +91,8 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font: Arial, Helvetica, sans-serif;
+  font-color: black;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */

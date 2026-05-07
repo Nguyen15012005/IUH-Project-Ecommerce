@@ -4,7 +4,7 @@ import { Divider } from "@mui/material";
 
 const Review = () => {
   return (
-    <div className="p-5 lg:p-20 flex flex-col lg:flex-row gap-10 bg-gray-50">
+    <div className="p-5 lg:p-15 flex flex-col lg:flex-row gap-10 bg-gray-50">
       {/* LEFT */}
       <section className="w-full md:w-1/2 lg:w-[30%] space-y-4 bg-white p-4 rounded-xl shadow-sm">
         <img

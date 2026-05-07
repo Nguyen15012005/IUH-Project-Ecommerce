@@ -14,6 +14,7 @@ import SellerProfile from "./seller/pages/profile/SellerProfile";
 import Reports from "./seller/pages/reports/Reports";
 import ProductDetail from "./customer/pages/product/product_detail/ProductDetail";
 import Review from "./customer/pages/review/Review";
+import Cart from "./customer/pages/cart/Cart";
 
 const App = () => {
   return (
@@ -28,7 +29,8 @@ const App = () => {
               {/* <Home /> */}
               {/* <Product /> */}
               {/* <ProductDetail /> */}
-              <Review />
+              {/* <Review /> */}
+              <Cart />
               <Footer />
             </div>
           }

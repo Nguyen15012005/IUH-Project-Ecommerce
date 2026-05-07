@@ -10,12 +10,14 @@ import {
 } from "@mui/material";
 import {
   AddShoppingCart,
+  Favorite,
   FavoriteBorder,
   Search,
   Storefront,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import CategorySheet from "./CategorySheet";
+import { red } from "@mui/material/colors";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -139,7 +141,7 @@ const Navbar = () => {
               </IconButton>
 
               <IconButton className="hover:bg-gray-100">
-                <FavoriteBorder sx={{ fontSize: 24 }} />
+                <Favorite sx={{ fontSize: 24, color: red[500] }} />
               </IconButton>
 
               <IconButton className="hover:bg-gray-100 relative">
