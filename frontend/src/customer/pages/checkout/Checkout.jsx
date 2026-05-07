@@ -79,7 +79,7 @@ const Checkout = () => {
         <div className="col-span-2 space-y-5">
           {/* Header */}
           <div className="flex justify-between items-center">
-            <span className="font-semibold text-lg">
+            <span className="font-semibold text-2xl text-gray-700">
               Chọn địa chỉ giao hàng
             </span>
 
@@ -127,7 +127,7 @@ const Checkout = () => {
         <div className="col-span-1 text-sm space-y-4">
           {/* Payment */}
           <section className="space-y-3 border p-5 rounded-xl bg-white shadow-sm">
-            <h1 className="font-semibold text-center text-gray-700">
+            <h1 className="font-semibold text-center text-gray-700 text-lg">
               Chọn phương thức thanh toán
             </h1>
 
